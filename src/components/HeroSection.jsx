@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { Pichkari, GulalBowl, ColorBalloon } from "./HoliToys";
+import ganeshjiSvg from "../assets/Ganeshji.svg";
 
 // Photo from public folder - served at root when deployed
 const bittuPhoto = "/Bittu.png";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 py-16 md:py-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center px-4 py-5 md:py-10 overflow-hidden">
       <Pichkari
         className="absolute top-16 left-4 md:left-16 w-20 md:w-28 opacity-40 animate-float rotate-[-30deg]"
         color1="#ff1493"
@@ -31,11 +32,13 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
-          className="mb-4"
+          className="mb-4 flex justify-center"
         >
-          <p className="font-cursive text-2xl md:text-3xl text-gold-500 font-bold">
-            || श्री गणेशाय नमः ||
-          </p>
+          <img
+            src={ganeshjiSvg}
+            alt="श्री गणेशाय नमः"
+            className="h-16 md:h-20 w-auto"
+          />
         </motion.div>
 
         {/* Deity blessings */}
@@ -46,12 +49,12 @@ export default function HeroSection() {
           className="mb-4 space-y-1"
         >
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-royal-700 font-sans text-xs md:text-sm font-semibold">
-            <span>|| श्री सुंधामातायै नमः ||</span>
-            <span>|| आबुगढ़ री अधर देवी नमः ||</span>
+            <span>|| श्री गणेशाय नमः ||</span>
+            <span>|| श्री वाँवेश्वर महादेव नमः ||</span>
           </div>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-royal-700 font-sans text-xs md:text-sm font-semibold">
-            <span>|| श्री खेतलाजी नमः ||</span>
-            <span>|| श्री वोवेश्वर महादेवजी नमः ||</span>
+            <span>|| श्री सुंधामाता नमः ||</span>
+            <span>|| श्री अर्बुदामाता नमः ||</span>
           </div>
         </motion.div>
 
@@ -151,7 +154,7 @@ export default function HeroSection() {
         >
           <p className="text-gold-500 font-bold text-lg md:text-xl">मान्यवर,</p>
           <p>
-            श्री सुंधामाता एवं सियाणा खेतलाजी की असीम कृपा से
+            श्री सुंधामाता एवं सोनाना खेतलाजी की असीम कृपा से
             सुंदर देवी व श्री जेपारामजी परमार के पड़पौत्र
             एवं श्रीमती रंजन देवी व श्री छगनलालजी के सुपौत्र
           </p>
