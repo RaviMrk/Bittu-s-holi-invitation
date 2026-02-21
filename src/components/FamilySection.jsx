@@ -42,7 +42,7 @@ const familyGroups = [
 
 export default function FamilySection() {
   return (
-    <section id="family" className="relative py-24 px-4 overflow-hidden">
+    <section id="family" className="relative py-10 px-4 overflow-hidden">
       <Dhol className="absolute top-10 left-4 w-20 md:w-24 opacity-20 animate-wiggle" />
       <Thandai className="absolute bottom-12 right-6 w-14 md:w-18 opacity-20 animate-float-reverse" />
 

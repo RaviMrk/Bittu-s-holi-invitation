@@ -10,7 +10,7 @@ const boxes = [
 
 export default function CountdownSection() {
   return (
-    <section className="relative py-24 px-4 overflow-hidden">
+    <section className="relative py-10 px-4 overflow-hidden">
       {/* Decorative toys */}
       <Dhol className="absolute top-8 left-4 w-20 md:w-24 opacity-20 animate-wiggle" />
       <ColorBalloon className="absolute bottom-12 right-8 w-10 md:w-14 opacity-25 animate-float" color="#ff1493" />

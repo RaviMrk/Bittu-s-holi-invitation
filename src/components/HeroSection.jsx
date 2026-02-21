@@ -70,7 +70,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="font-cursive text-5xl md:text-7xl text-royal-700 font-bold py-4 mb-4"
+          className="font-cursive text-5xl md:text-7xl text-royal-700 font-bold py-10 mb-4"
         >
           ढूंढोत्सव
         </motion.h2>

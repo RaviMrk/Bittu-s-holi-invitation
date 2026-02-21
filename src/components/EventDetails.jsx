@@ -40,7 +40,7 @@ const cardVariants = {
 
 export default function EventDetails() {
   return (
-    <section id="details" className="relative py-24 px-4 overflow-hidden">
+    <section id="details" className="relative py-10 px-4 overflow-hidden">
       <GulalBowl className="absolute top-10 right-8 w-20 md:w-24 opacity-25 animate-float" color="#8b5cf6" />
       <Pichkari className="absolute bottom-10 left-4 w-24 md:w-28 opacity-20 animate-float-slow rotate-[10deg]" color1="#3b82f6" color2="#10b981" />
 
