@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
-import bittuPhoto from "../assets/Bittu.png";
 import { Pichkari, GulalBowl, ColorBalloon } from "./HoliToys";
+
+// Photo from public folder - served at root when deployed
+const bittuPhoto = "/Bittu.png";
 
 export default function HeroSection() {
   return (
