@@ -1,29 +1,30 @@
 import { motion } from "framer-motion";
+import { GulalBowl, Pichkari } from "./HoliToys";
 
 const details = [
   {
     icon: "📅",
-    label: "Date",
-    value: "Coming Soon",
-    sub: "Save the Date!",
-    hoverColor: "group-hover:border-holi-pink/40",
-    glowColor: "from-holi-pink/10",
+    label: "दिनांक",
+    value: "2 मार्च 2026",
+    sub: "सोमवार",
+    accent: "border-holi-pink/30 hover:border-holi-pink/50",
+    glow: "group-hover:shadow-holi-pink/10",
   },
   {
     icon: "🕐",
-    label: "Time",
-    value: "To Be Announced",
-    sub: "Stay Tuned",
-    hoverColor: "group-hover:border-holi-yellow/40",
-    glowColor: "from-holi-yellow/10",
+    label: "प्रतिभोज",
+    value: "सुबह 11:00 बजे",
+    sub: "से आपके आगमन तक",
+    accent: "border-holi-yellow/30 hover:border-holi-yellow/50",
+    glow: "group-hover:shadow-holi-yellow/10",
   },
   {
     icon: "📍",
-    label: "Venue",
-    value: "To Be Announced",
-    sub: "Details Coming Soon",
-    hoverColor: "group-hover:border-holi-green/40",
-    glowColor: "from-holi-green/10",
+    label: "स्थान",
+    value: "निवास स्थान",
+    sub: "पुलिस थाने के सामने वाली गली, आहोर (जालौर)",
+    accent: "border-holi-green/30 hover:border-holi-green/50",
+    glow: "group-hover:shadow-holi-green/10",
   },
 ];
 
@@ -39,8 +40,11 @@ const cardVariants = {
 
 export default function EventDetails() {
   return (
-    <section id="details" className="relative py-24 px-4">
-      <div className="max-w-5xl mx-auto">
+    <section id="details" className="relative py-24 px-4 overflow-hidden">
+      <GulalBowl className="absolute top-10 right-8 w-20 md:w-24 opacity-25 animate-float" color="#8b5cf6" />
+      <Pichkari className="absolute bottom-10 left-4 w-24 md:w-28 opacity-20 animate-float-slow rotate-[10deg]" color1="#3b82f6" color2="#10b981" />
+
+      <div className="max-w-5xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -48,11 +52,11 @@ export default function EventDetails() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-gold-400 font-sans text-xs tracking-[0.3em] uppercase mb-3">
-            Mark Your Calendar
+          <p className="text-gold-500 font-sans text-xs tracking-[0.2em] mb-3 font-medium">
+            तारीख याद रखें
           </p>
-          <h2 className="font-display text-4xl md:text-5xl text-white font-bold mb-5">
-            Event Details
+          <h2 className="font-display text-4xl md:text-5xl text-royal-700 font-bold mb-5">
+            कार्यक्रम विवरण
           </h2>
           <div className="divider-holi w-32 mx-auto rounded-full" />
         </motion.div>
@@ -68,25 +72,22 @@ export default function EventDetails() {
             <motion.div
               key={item.label}
               variants={cardVariants}
-              className={`group relative bg-white/[0.04] backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center hover:bg-white/[0.08] transition-all duration-500 ${item.hoverColor}`}
+              className={`group relative card-cream rounded-2xl p-8 text-center transition-all duration-500 shadow-sm hover:shadow-xl ${item.accent} ${item.glow}`}
             >
-              <div className={`absolute inset-0 rounded-2xl bg-gradient-to-b ${item.glowColor} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-
-              {/* Gold corner accents */}
-              <div className="absolute top-0 left-0 w-8 h-8 border-t border-l border-gold-400/20 rounded-tl-2xl" />
-              <div className="absolute top-0 right-0 w-8 h-8 border-t border-r border-gold-400/20 rounded-tr-2xl" />
-              <div className="absolute bottom-0 left-0 w-8 h-8 border-b border-l border-gold-400/20 rounded-bl-2xl" />
-              <div className="absolute bottom-0 right-0 w-8 h-8 border-b border-r border-gold-400/20 rounded-br-2xl" />
+              <div className="absolute top-0 left-0 w-8 h-8 border-t border-l border-gold-400/25 rounded-tl-2xl" />
+              <div className="absolute top-0 right-0 w-8 h-8 border-t border-r border-gold-400/25 rounded-tr-2xl" />
+              <div className="absolute bottom-0 left-0 w-8 h-8 border-b border-l border-gold-400/25 rounded-bl-2xl" />
+              <div className="absolute bottom-0 right-0 w-8 h-8 border-b border-r border-gold-400/25 rounded-br-2xl" />
 
               <div className="relative z-10">
-                <span className="text-5xl mb-5 block drop-shadow-lg">{item.icon}</span>
-                <p className="text-gold-400 text-xs font-semibold tracking-[0.2em] uppercase mb-3">
+                <span className="text-5xl mb-5 block drop-shadow-sm">{item.icon}</span>
+                <p className="text-gold-500 text-xs font-semibold tracking-[0.15em] mb-3">
                   {item.label}
                 </p>
-                <p className="text-white text-xl md:text-2xl font-display font-bold mb-1">
+                <p className="text-royal-700 text-xl md:text-2xl font-display font-bold mb-1">
                   {item.value}
                 </p>
-                <p className="text-royal-300/60 text-sm">{item.sub}</p>
+                <p className="text-royal-700/40 text-sm leading-relaxed">{item.sub}</p>
               </div>
             </motion.div>
           ))}
