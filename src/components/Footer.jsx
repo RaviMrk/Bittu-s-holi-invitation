@@ -25,7 +25,7 @@ export default function Footer() {
             छगनलालजी पुत्र श्री जेपारामजी परमार
           </p>
           <p className="text-royal-700 font-sans text-base font-semibold mt-1">
-            📞 9414054647
+            📞 9860182254
           </p>
         </div>
 

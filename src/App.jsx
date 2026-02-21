@@ -23,7 +23,6 @@ function App() {
       <HeroSection />
       <EventDetails />
       <FamilySection />
-      <MessageSection />
       <Footer />
     </div>
   );

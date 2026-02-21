@@ -44,12 +44,12 @@ export default function HeroSection() {
           className="mb-4 space-y-1"
         >
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-royal-700 font-sans text-xs md:text-sm font-semibold">
-            <span>|| श्री सुंधामाताजी नमः ||</span>
+            <span>|| श्री सुंधामातायै नमः ||</span>
             <span>|| आबुगढ़ री अधर देवी नमः ||</span>
           </div>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-royal-700 font-sans text-xs md:text-sm font-semibold">
             <span>|| श्री खेतलाजी नमः ||</span>
-            <span>|| श्री महादेवजी नमः ||</span>
+            <span>|| श्री वोवेश्वर महादेवजी नमः ||</span>
           </div>
         </motion.div>
 
@@ -65,7 +65,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="font-cursive text-5xl md:text-7xl text-royal-700 font-bold mb-4"
+          className="font-cursive text-5xl md:text-7xl text-royal-700 font-bold py-4 mb-4"
         >
           ढूंढोत्सव
         </motion.h2>
@@ -102,7 +102,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="font-cursive text-5xl md:text-7xl lg:text-8xl text-gold-500 mb-1 leading-tight font-bold drop-shadow-[0_2px_10px_rgba(212,160,23,0.3)]"
+          className="font-cursive text-4xl md:text-7xl lg:text-8xl text-gold-500 mb-1 leading-tight font-bold drop-shadow-[0_2px_10px_rgba(212,160,23,0.3)]"
         >
           चि. जियांश
         </motion.h1>
