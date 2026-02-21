@@ -18,24 +18,24 @@ export default function Footer() {
 
         {/* Sender info */}
         <div className="card-cream inline-block rounded-2xl px-8 py-5 shadow-sm border border-gold-400/20 mb-8">
-          <p className="text-gold-500 font-sans text-xs tracking-[0.15em] font-medium mb-2">
+          <p className="text-gold-500 font-sans text-sm tracking-[0.15em] font-bold mb-2">
             प्रेषक
           </p>
-          <p className="text-royal-700 font-display text-base md:text-lg font-bold">
-            फूलचन्द पुत्र श्री देवारामजी परहाडिया
+          <p className="text-royal-700 font-display text-lg md:text-xl font-bold">
+            छगनलालजी पुत्र श्री जेपारामजी परमार
           </p>
-          <p className="text-royal-700/60 font-sans text-sm mt-1">
+          <p className="text-royal-700 font-sans text-base font-semibold mt-1">
             📞 9414054647
           </p>
         </div>
 
-        <p className="font-cursive text-4xl md:text-5xl text-gold-500 mb-3 drop-shadow-[0_2px_8px_rgba(212,160,23,0.15)]">
-          मानवीक
+        <p className="font-cursive text-4xl md:text-5xl text-gold-500 mb-3 font-bold drop-shadow-[0_2px_8px_rgba(212,160,23,0.15)]">
+          जियांश
         </p>
-        <p className="holi-text font-display text-sm md:text-base font-semibold tracking-wider mb-2">
+        <p className="holi-text font-display text-base md:text-lg font-bold tracking-wider mb-2">
           रंग बरसे!
         </p>
-        <p className="text-royal-700/35 font-sans text-xs">
+        <p className="text-royal-700/80 font-sans text-sm font-semibold">
           हम आपके साथ इस रंगीन दिन को मनाने के लिए उत्सुक हैं
         </p>
 
@@ -43,13 +43,13 @@ export default function Footer() {
         <div className="flex items-center justify-center gap-3 mt-8">
           {["bg-holi-pink", "bg-holi-orange", "bg-holi-yellow", "bg-holi-green", "bg-holi-blue", "bg-holi-purple"].map(
             (color) => (
-              <div key={color} className={`w-2 h-2 rounded-full ${color} opacity-60`} />
+              <div key={color} className={`w-2 h-2 rounded-full ${color} opacity-70`} />
             )
           )}
         </div>
 
-        <div className="flex items-center justify-center gap-2 mt-6 text-royal-700/30 text-[10px]">
-          <span>चि. मानवीक (मोहन) के लिए</span>
+        <div className="flex items-center justify-center gap-2 mt-6 text-royal-700/60 text-xs font-semibold">
+          <span>चि. जियांश (बिट्टू) के लिए</span>
           <span className="text-holi-pink animate-pulse">♥</span>
           <span>से बनाया गया</span>
         </div>

@@ -52,7 +52,7 @@ export default function EventDetails() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-gold-500 font-sans text-xs tracking-[0.2em] mb-3 font-medium">
+          <p className="text-gold-500 font-sans text-sm tracking-[0.2em] mb-3 font-bold">
             तारीख याद रखें
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-royal-700 font-bold mb-5">
@@ -81,13 +81,13 @@ export default function EventDetails() {
 
               <div className="relative z-10">
                 <span className="text-5xl mb-5 block drop-shadow-sm">{item.icon}</span>
-                <p className="text-gold-500 text-xs font-semibold tracking-[0.15em] mb-3">
+                <p className="text-gold-500 text-sm font-bold tracking-[0.15em] mb-3">
                   {item.label}
                 </p>
                 <p className="text-royal-700 text-xl md:text-2xl font-display font-bold mb-1">
                   {item.value}
                 </p>
-                <p className="text-royal-700/40 text-sm leading-relaxed">{item.sub}</p>
+                <p className="text-royal-700/80 text-sm font-semibold leading-relaxed">{item.sub}</p>
               </div>
             </motion.div>
           ))}

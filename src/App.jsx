@@ -6,10 +6,17 @@ import EventDetails from "./components/EventDetails";
 import FamilySection from "./components/FamilySection";
 import MessageSection from "./components/MessageSection";
 import Footer from "./components/Footer";
+import AutoScroll from "./components/AutoScroll";
 
 function App() {
   return (
-    <div className="bg-cream-50 min-h-screen font-sans relative">
+    <div
+      className="min-h-screen font-sans relative"
+      style={{
+        background: "linear-gradient(170deg, #fff5ee 0%, #ffe8d6 30%, #fdd9b5 55%, #fce4c0 80%, #fef6e0 100%)",
+      }}
+    >
+      <AutoScroll />
       <HoliColorThrow />
       <ColorSplashes />
       <Sparkles />

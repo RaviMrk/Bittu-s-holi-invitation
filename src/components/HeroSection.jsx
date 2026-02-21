@@ -31,7 +31,7 @@ export default function HeroSection() {
           transition={{ duration: 0.9 }}
           className="mb-4"
         >
-          <p className="font-cursive text-2xl md:text-3xl text-gold-500">
+          <p className="font-cursive text-2xl md:text-3xl text-gold-500 font-bold">
             || श्री गणेशाय नमः ||
           </p>
         </motion.div>
@@ -43,11 +43,11 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.15 }}
           className="mb-4 space-y-1"
         >
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-royal-700/60 font-sans text-[11px] md:text-xs">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-royal-700 font-sans text-xs md:text-sm font-semibold">
             <span>|| श्री सुंधामाताजी नमः ||</span>
             <span>|| आबुगढ़ री अधर देवी नमः ||</span>
           </div>
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-royal-700/60 font-sans text-[11px] md:text-xs">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-royal-700 font-sans text-xs md:text-sm font-semibold">
             <span>|| श्री खेतलाजी नमः ||</span>
             <span>|| श्री महादेवजी नमः ||</span>
           </div>
@@ -65,7 +65,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="font-cursive text-4xl md:text-6xl text-royal-700 font-bold mb-4"
+          className="font-cursive text-5xl md:text-7xl text-royal-700 font-bold mb-4"
         >
           ढूंढोत्सव
         </motion.h2>
@@ -83,11 +83,11 @@ export default function HeroSection() {
               background: "conic-gradient(from 0deg, #ff1493, #ff6b35, #fbbf24, #10b981, #3b82f6, #8b5cf6, #ff1493)",
             }}
           />
-          <div className="absolute -inset-1.5 rounded-full bg-cream-50" />
+          <div className="absolute -inset-1.5 rounded-full bg-white/80 backdrop-blur-sm" />
           <div className="relative w-full h-full rounded-full photo-frame animate-pulse-glow overflow-hidden">
             <img
               src={bittuPhoto}
-              alt="चि. मानवीक (मोहन)"
+              alt="चि. जियांश"
               className="w-full h-full object-cover object-top"
             />
           </div>
@@ -102,24 +102,24 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="font-cursive text-5xl md:text-7xl lg:text-8xl text-gold-500 mb-1 leading-tight drop-shadow-[0_2px_10px_rgba(212,160,23,0.2)]"
+          className="font-cursive text-5xl md:text-7xl lg:text-8xl text-gold-500 mb-1 leading-tight font-bold drop-shadow-[0_2px_10px_rgba(212,160,23,0.3)]"
         >
-          चि. मानवीक
+          चि. जियांश
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.85 }}
-          className="text-gold-400 font-display text-xl md:text-2xl mb-2"
+          className="text-gold-500 font-display text-xl md:text-2xl font-bold mb-2"
         >
-          (मोहन)
+          (बिट्टू)
         </motion.p>
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.95 }}
-          className="text-royal-700/50 font-sans text-sm md:text-base mb-5"
+          className="text-royal-700 font-sans text-sm md:text-base font-semibold mb-5"
         >
           (सुपुत्र: श्रीमती अंजू व श्री रवि परमार)
         </motion.p>
@@ -135,7 +135,7 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="holi-text font-display text-lg md:text-2xl font-semibold mb-5"
+          className="holi-text font-display text-xl md:text-3xl font-bold mb-5"
         >
           एक शाही होली उत्सव
         </motion.p>
@@ -145,25 +145,25 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.1 }}
-          className="text-royal-700/70 font-sans text-sm md:text-base max-w-2xl mx-auto leading-relaxed space-y-2 mb-4"
+          className="text-royal-700 font-sans text-base md:text-lg max-w-2xl mx-auto leading-relaxed space-y-3 mb-4 font-medium"
         >
-          <p className="text-gold-500 font-medium text-base md:text-lg">मान्यवर,</p>
+          <p className="text-gold-500 font-bold text-lg md:text-xl">मान्यवर,</p>
           <p>
             श्री सुंधामाता एवं सियाणा खेतलाजी की असीम कृपा से
-            स्वर्गीय बबली देवी व श्री देवारामजी परहाडिया के पड़पौत्र
-            एवं श्रीमती मंजूदेवी व श्री फूलचन्दजी के सुपौत्र
+            सुंदर देवी व श्री जेपारामजी परमार के पड़पौत्र
+            एवं श्रीमती रंजन देवी व श्री छगनलालजी के सुपौत्र
           </p>
-          <p className="font-semibold text-royal-700/80 text-base md:text-lg">
-            चि. मानवीक (मोहन)
+          <p className="font-bold text-royal-700 text-lg md:text-xl">
+            चि. जियांश (बिट्टू)
           </p>
           <p>
-            के ढूंढ उत्सव एवं पूजनीय श्री देवारामजी के स्वर्ण सीढ़ी चढ़ने की असीम
+            के ढूंढ उत्सव एवं पूजनीय श्री सुंदर देवी व श्री जेपारामजी परमार के स्वर्ण सीढ़ी चढ़ने की असीम
             खुशी में{" "}
-            <span className="text-gold-500 font-semibold">
+            <span className="text-gold-500 font-bold">
               आप सपरिवार सादर आमंत्रित हैं।
             </span>
           </p>
-          <p className="text-royal-700/50 italic">
+          <p className="text-royal-700/80 italic font-semibold">
             आपका आगमन हमारे उत्सव की शोभा बढ़ाएगा।
           </p>
         </motion.div>
@@ -176,13 +176,13 @@ export default function HeroSection() {
         >
           <a
             href="#details"
-            className="inline-block px-8 py-3 bg-gradient-to-r from-gold-400 to-gold-500 text-white font-semibold rounded-full hover:from-gold-300 hover:to-gold-400 transition-all duration-300 shadow-lg shadow-gold-500/20 hover:shadow-gold-400/30 hover:-translate-y-0.5"
+            className="inline-block px-8 py-3 bg-gradient-to-r from-gold-400 to-gold-500 text-white font-bold rounded-full hover:from-gold-300 hover:to-gold-400 transition-all duration-300 shadow-lg shadow-gold-500/20 hover:shadow-gold-400/30 hover:-translate-y-0.5"
           >
             कार्यक्रम विवरण
           </a>
           <a
             href="#family"
-            className="inline-block px-8 py-3 border-2 border-gold-400/50 text-gold-500 font-semibold rounded-full hover:bg-gold-400/10 transition-all duration-300"
+            className="inline-block px-8 py-3 border-2 border-gold-400/50 text-gold-500 font-bold rounded-full hover:bg-gold-400/10 transition-all duration-300"
           >
             परिवार जन
           </a>

@@ -22,7 +22,7 @@ const familyGroups = [
     title: "स्वागत कर्ता",
     icon: "🤝",
     members:
-      "कुन्दनमल, विनोद, भंवरलाल, जयन्तीलाल, राजेश, महेन्द्र, जितेन्द्र, ओमप्रकाश, त्रिभुवन, प्रविण, कमलेश, हिमांशु एवं समस्त परहाडिया परिवार, आहोर।",
+      "कुन्दनमल, विनोद, भंवरलाल, जयन्तीलाल, राजेश, महेन्द्र, जितेन्द्र, ओमप्रकाश, त्रिभुवन, प्रविण, कमलेश, हिमांशु एवं समस्त परमार परिवार, आहोर।",
     color: "border-holi-orange/30",
   },
   {
@@ -54,7 +54,7 @@ export default function FamilySection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-gold-500 font-sans text-xs tracking-[0.2em] mb-3 font-medium">
+          <p className="text-gold-500 font-sans text-sm tracking-[0.2em] mb-3 font-bold">
             सादर निमंत्रण
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-royal-700 font-bold mb-5">
@@ -83,7 +83,7 @@ export default function FamilySection() {
                 </h3>
               </div>
               <div className="w-16 h-[2px] bg-gradient-to-r from-gold-400/50 to-transparent mb-4 rounded-full" />
-              <p className="text-royal-700/60 font-sans text-sm md:text-base leading-relaxed">
+              <p className="text-royal-700 font-sans text-sm md:text-base leading-relaxed font-semibold">
                 {group.members}
               </p>
             </motion.div>
