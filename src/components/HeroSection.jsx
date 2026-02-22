@@ -188,7 +188,7 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="holi-text font-display text-xl md:text-3xl font-bold mb-5"
+          className="holi-text font-display text-xl md:text-3xl font-bold mb-5 p-2"
         >
           एक शाही होली उत्सव
         </motion.p>
@@ -202,7 +202,7 @@ export default function HeroSection() {
         >
           <p className="text-gold-500 font-bold text-lg md:text-xl">मान्यवर,</p>
           <p>
-            श्री सुंधामाता एवं सोनाना खेतलाजी की असीम कृपा से
+            श्री सुंधामाता एवं सोनाणा खेतलाजी की असीम कृपा से
             सुंदर देवी व श्री जेपारामजी परमार के पड़पौत्र
             एवं श्रीमती रंजन देवी व श्री छगनलालजी के सुपौत्र
           </p>
