@@ -70,7 +70,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="font-cursive text-5xl md:text-7xl text-royal-700 font-bold py-10 mb-4"
+          className="font-cursive text-5xl md:text-7xl holi-text font-bold pt-2 pb-10 mb-4 leading-tight"
         >
           ढूंढोत्सव
         </motion.h2>
@@ -82,24 +82,80 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 0.5, type: "spring", stiffness: 100 }}
           className="relative mx-auto mb-6 w-48 h-48 md:w-60 md:h-60 lg:w-64 lg:h-64"
         >
+          {/* Outer breathing conic ring */}
           <div
-            className="absolute -inset-4 rounded-full animate-rotate-slow opacity-50"
+            className="absolute -inset-5 rounded-full animate-breathe"
             style={{
               background: "conic-gradient(from 0deg, #ff1493, #ff6b35, #fbbf24, #10b981, #3b82f6, #8b5cf6, #ff1493)",
+              filter: "blur(6px)",
             }}
           />
-          <div className="absolute -inset-1.5 rounded-full bg-white/80 backdrop-blur-sm" />
+          {/* Inner spinning conic ring */}
+          <div
+            className="absolute -inset-3 rounded-full animate-rotate-slow opacity-60"
+            style={{
+              background: "conic-gradient(from 180deg, #8b5cf6, #3b82f6, #10b981, #fbbf24, #ff6b35, #ff1493, #8b5cf6)",
+            }}
+          />
+          {/* Counter-rotating dashed ring */}
+          <div
+            className="absolute -inset-6 rounded-full animate-rotate-reverse opacity-25"
+            style={{
+              border: "2px dashed rgba(212, 160, 23, 0.6)",
+            }}
+          />
+
+          {/* White buffer */}
+          <div className="absolute -inset-1.5 rounded-full bg-white/85 backdrop-blur-sm" />
+
+          {/* Photo */}
           <div className="relative w-full h-full rounded-full photo-frame animate-pulse-glow overflow-hidden">
             <img
               src={bittuPhoto}
               alt="चि. जियांश"
               className="w-full h-full object-cover object-top"
             />
+            {/* Shimmer sweep */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background: "linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.35) 50%, transparent 60%)",
+                animation: "photo-shimmer 4s ease-in-out 2s infinite",
+              }}
+            />
           </div>
-          <div className="absolute -top-3 -left-3 w-7 h-7 border-t-2 border-l-2 border-gold-400 rounded-tl-lg" />
-          <div className="absolute -top-3 -right-3 w-7 h-7 border-t-2 border-r-2 border-gold-400 rounded-tr-lg" />
-          <div className="absolute -bottom-3 -left-3 w-7 h-7 border-b-2 border-l-2 border-gold-400 rounded-bl-lg" />
-          <div className="absolute -bottom-3 -right-3 w-7 h-7 border-b-2 border-r-2 border-gold-400 rounded-br-lg" />
+
+          {/* Orbiting particles */}
+          {[
+            { color: "#ff1493", size: 8, duration: 8, delay: 0, radius: 145 },
+            { color: "#fbbf24", size: 6, duration: 10, delay: 2, radius: 150 },
+            { color: "#10b981", size: 7, duration: 9, delay: 4, radius: 155 },
+            { color: "#8b5cf6", size: 5, duration: 11, delay: 1, radius: 160 },
+            { color: "#3b82f6", size: 6, duration: 7, delay: 3, radius: 148 },
+            { color: "#ff6b35", size: 5, duration: 12, delay: 5, radius: 158 },
+          ].map((p, i) => (
+            <div
+              key={i}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+              style={{
+                width: p.size,
+                height: p.size,
+                borderRadius: "50%",
+                backgroundColor: p.color,
+                opacity: 0.7,
+                filter: `blur(${p.size > 6 ? 1 : 0}px)`,
+                "--orbit-r": `${p.radius}px`,
+                animation: `orbit ${p.duration}s linear ${p.delay}s infinite`,
+                animationFillMode: "backwards",
+              }}
+            />
+          ))}
+
+          {/* Corner accents */}
+          <div className="absolute -top-4 -left-4 w-8 h-8 border-t-2 border-l-2 border-gold-400 rounded-tl-lg" />
+          <div className="absolute -top-4 -right-4 w-8 h-8 border-t-2 border-r-2 border-gold-400 rounded-tr-lg" />
+          <div className="absolute -bottom-4 -left-4 w-8 h-8 border-b-2 border-l-2 border-gold-400 rounded-bl-lg" />
+          <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b-2 border-r-2 border-gold-400 rounded-br-lg" />
         </motion.div>
 
         {/* Child's Name */}
@@ -107,18 +163,10 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="font-cursive text-4xl md:text-7xl lg:text-8xl text-gold-500 mb-1 leading-tight font-bold drop-shadow-[0_2px_10px_rgba(212,160,23,0.3)]"
+          className="font-cursive text-4xl md:text-7xl lg:text-8xl text-gold-500 mb-2 py-5 leading-tight font-bold drop-shadow-[0_2px_10px_rgba(212,160,23,0.3)]"
         >
-          चि. जियांश
+          चि. जियांश <span className="font-display text-xl md:text-2xl">(बिट्टू)</span>
         </motion.h1>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.85 }}
-          className="text-gold-500 font-display text-xl md:text-2xl font-bold mb-2"
-        >
-          (बिट्टू)
-        </motion.p>
 
         <motion.p
           initial={{ opacity: 0 }}
